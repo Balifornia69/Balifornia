@@ -23,30 +23,22 @@ border-radius:14px;
 grid-column:span 2;
 grid-row:span 2;
 }
-}.gallery-video{
+.gallery-video{
   grid-column:1/-1;
-  width:100%;
-  margin:16px auto 0;
   display:flex;
   justify-content:center;
+  margin:16px auto 0;
 }
 
 .gallery-video video{
   display:block;
-  width:100%;
-  max-width:760px;
-  height:auto;
-  aspect-ratio:4/3;
+  width:430px;
+  height:287px;
+  max-width:calc(100vw - 64px);
   object-fit:cover;
   border-radius:14px;
 }
 
-@media (min-width:600px) and (max-width:1024px){
-  .gallery-video video{
-    width:60%;
-    max-width:600px;
-  }
-}
 }</style>
 </head>
 <body>
