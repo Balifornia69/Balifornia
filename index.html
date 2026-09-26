@@ -27,17 +27,20 @@ grid-row:span 2;
   grid-column:1/-1;
   display:flex;
   justify-content:center;
-  margin:0 auto; }
-#gallery{ padding-bottom:70px;
+  margin:0 auto;
 }
 
 .gallery-video video{
   display:block;
-  width:430px;
-  height:287px;
-  max-width:calc(100vw - 64px);
+  width:min(430px, calc(100vw - 64px));
+  height:auto;
+  aspect-ratio:430/287;
   object-fit:cover;
   border-radius:14px;
+}
+
+#faq{
+  margin-top:70px;
 }
 
 }</style>
