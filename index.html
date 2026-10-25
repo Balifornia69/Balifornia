@@ -83,7 +83,7 @@ max-width:760px;
 <a class="floating wa" data-activity="General inquiry" href="#">WhatsApp</a>
 <script>
 const phone='6282247995545';
-function wa(activity,date='',guests='',hotel=''){let text=`Hello Balifornia! I would like to ask about ${activity}.`;if(date)text+=`\nDate: ${date}`;if(guests)text+=`\nGuests: ${guests}`;if(hotel)text+=`\nHotel/Pickup: ${hotel}`;text+='\nPlease send me availability and details. Thank you.';return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`}
+function wa(activity,date='',guests='',hotel=''){let text=activity==='General inquiry'?`Hello Balifornia! 👋 I'm interested in your tours and activities in Menjangan Island and North Bali. Could you please share more information? Thank you!`:`Hello Balifornia! I would like to ask about ${activity}.`;if(date)text+=`\nDate: ${date}`;if(guests)text+=`\nGuests: ${guests}`;if(hotel)text+=`\nHotel/Pickup: ${hotel}`;if(activity!=='General inquiry')text+='\nPlease send me availability and details. Thank you.';return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`}
 document.querySelectorAll('.wa').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();location.href=wa(a.dataset.activity||'an adventure')}));
 document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();location.href=wa(document.getElementById('activity').value,document.getElementById('date').value,document.getElementById('guests').value,document.getElementById('hotel').value)});
 </script>
